@@ -209,10 +209,10 @@
                 <div class="speaker1">
                     <div class="lgx-single-speaker2 lgx-single-speaker3">
                         <figure>
-                            <a class="profile-img"><img src="/assets/img/speakers/mas_ditya.png" alt="speaker" /></a>
+                            <a class="profile-img"><img src="/assets/img/speakers/mas_ilham.png" alt="speaker" /></a>
                             <figcaption>
                                 <div class="speaker-info">
-                                    <h3 class="title">Bagas Aditya Mahendra</h3>
+                                    <h3 class="title">Ilham Nur Ramadhan</h3>
                                     <h4 class="subtitle">Fullstack Developer </h4>
                                 </div>
                             </figcaption>
@@ -225,8 +225,8 @@
                             <a class="profile-img"><img src="/assets/img/speakers/mas_naufal.png" alt="speaker" /></a>
                             <figcaption>
                                 <div class="speaker-info">
-                                    <h3 class="title">Nida Aulia Karima</h3>
-                                    <h4 class="subtitle">CTO Tokopedei</h4>
+                                    <h3 class="title">Naufal Iksham</h3>
+                                    <h4 class="subtitle">FrontEnd Developer</h4>
                                 </div>
                             </figcaption>
                         </figure>
