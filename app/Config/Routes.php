@@ -42,6 +42,7 @@ $routes->post('/login', 'AuthController::login');
 $routes->post('/registration', 'AuthController::registration');
 $routes->post('/reminder', 'AuthController::reminder');
 $routes->get('/pay/(:num)', 'AuthController::pay/$1');
+$routes->get('/email', 'Home::email');
 //Admin
 $routes->get('/admin/dashboard', 'AdminController::index',['filter' => 'auth']);
 

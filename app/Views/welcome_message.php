@@ -142,10 +142,10 @@
                                     <div class="lgx-banner-info-area">
                                         <div class="lgx-banner-info-circle">
                                             <div class="info-circle-inner">
-                                                <h3 class="date"><b class="lgx-counter">15</b> <span>October</span></h3>
+                                                <h3 class="date"><b class="lgx-counter">8</b> <span>Oktober</span></h3>
                                                 <div class="lgx-countdown-area">
                                                     <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
-                                                    <div id="lgx-countdown" data-date="2022/10/15"></div>
+                                                    <div id="lgx-countdown" data-date="2022/10/8"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -154,7 +154,7 @@
                                             <!--banner-info-margin-->
                                             <h3 class="subtitle"><strong class="text-yellow-500">WORKSHOP <script>document.write(new Date().getFullYear())</script></strong></h3>
                                             <h2 class="title"><strong>Zero to Front-end Hero</strong></h2>
-                                            <h3 class="location"><i class="fa fa-map-marker"></i> Universitas Dian Nuswantoro.</h3>
+                                            <h3 class="location"><i class="fa fa-map-marker"></i> Gedung D Universitas Dian Nuswantoro.</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -180,18 +180,42 @@
                             <div class="col-sm-12">
                                 <div class="lgx-about-content-area">
                                     <div class="lgx-heading">
-                                        <h2 class="heading ">Day 1 : It's a First Step</h2>
+                                        <h2 class="heading ">C++ - Github</h2>
                                         <!-- <h3 class="subheading">Do not miss the upcoming event, Who should attend?</h3> -->
                                     </div>
                                     <div class="lgx-about-content">
                                         <p class="text-white">
-                                            Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.
+                                            C++ merupakan bahasa yang sangat cocok di gunakan sebagai fundamental ketika mempelajari suatu bahasa pemrograman. Karena didalam C++ sendiri bisa di katakan dapat merangkum hampir dari keselurahan bahasa pemrograman yang ada.
                                         </p>
-                                        <div class="about-date-area">
-                                            <h4 class="date text-center"><span class="text-center">16</span></h4>
-                                            <p class="text-white"><span class="text-white">October 2022</span> Zoom Meeting</p>
-                                        </div>
+                                        <br>
+                                        <p class="text-white">
+                                        Sedangkan GitHub adalah sebuah website yang digunakan untuk menyimpan dan mengelola kode suatu project. Yang mana anda dapat membuat atau mengupload kode anda ke server GitHub dan kemudian melakukan coding secara online.
+                                        </p>
                                     </div>
+                                    <div class="lgx-heading">
+                                        <h2 class="heading ">HTML - Framework</h2>
+                                        <!-- <h3 class="subheading">Do not miss the upcoming event, Who should attend?</h3> -->
+                                    </div>
+                                    <div class="lgx-about-content">
+                                        <p class="text-white">
+                                        HTML adalah bahasa standar pemrogaman yang digunakan untuk membuat halaman website, yang diakses melalui internet.
+                                        </p>
+                                        <br>
+                                        <p class="text-white">
+                                        Framework adalah kerangka kerja yang digunakan untuk mengembangkan aplikasi berbasis desktop atau aplikasi berbasis website.
+                                        </p>
+                                    </div>
+                                        <div class="about-date-area">
+                                            <h4 class="date text-center"><span class="text-center">8</span></h4>
+                                            <p class="text-white"><span class="text-white">Oktober 2022</span> Gedung D.2.B Universitas Dian Nuswantoro</p>
+                                        </div>
+                                        <div class="about-date-area">
+                                            <h4 class="date-separator text-center"><span class="text-center">&</span></h4>
+                                        </div>
+                                        <div class="about-date-area">
+                                            <h4 class="date text-center"><span class="text-center">15</span></h4>
+                                            <p class="text-white"><span class="text-white">Oktober 2022</span> Gedung D.2.B Universitas Dian Nuswantoro</p>
+                                        </div>
                                 </div>
                             </div>
                         </section>
@@ -203,7 +227,7 @@
         <!--ABOUT END-->
         <section id="speaker">
             <div class="speaker-text">
-                <h2>Who's Speaking</h2>
+                <h2>Pembicara kita</h2>
             </div>
             <div class="speaker-box">
                 <div class="speaker1">
@@ -213,7 +237,7 @@
                             <figcaption>
                                 <div class="speaker-info">
                                     <h3 class="title">Ilham Nur Ramadhan</h3>
-                                    <h4 class="subtitle">Fullstack Developer </h4>
+                                    <h4 class="subtitle">Backend Developer </h4>
                                 </div>
                             </figcaption>
                         </figure>
@@ -258,15 +282,15 @@
                                             <?= csrf_field(); ?>
                                             <div class="box-check">
                                                 <div class="box1">
-                                                    <input name="day[]" type="checkbox" id="checkbox1" value="Day 1">
+                                                    <input name="day[]" type="checkbox" id="checkbox1" value="C++">
                                                     <label for="checkbox1"> </label>
-                                                    <p>Day1</p>
+                                                    <p>C++</p>
 
                                                 </div>
                                                 <div class="box2">
-                                                    <input name="day[]" type="checkbox" id="checkbox2" value="Day 2">
+                                                    <input name="day[]" type="checkbox" id="checkbox2" value="HTML">
                                                     <label for="checkbox2"></label>
-                                                    <p>Day2</p>
+                                                    <p>HTML</p>
                                                 </div>
                                             </div>
                                             <input name="nama" class="wpcf7-form-control form-control" placeholder="Your Full Name" type="text" <?php if (isset($inputs)) { ?> value="<?php echo $inputs['nama']; ?>" <?php } ?> required>

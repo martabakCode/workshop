@@ -8603,14 +8603,13 @@ button:hover:after {
 }
 
 .about-date-area {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   display: flex;
 }
 
 .about-date-area .date {
   margin-top: 0;
-  font-size: 6.8rem;
-  line-height: 10.2rem;
+  font-size: 5.8rem;
   line-height: 8.5rem;
   color: #FAC336;
   border: 8px solid #ddd;
@@ -8620,7 +8619,17 @@ button:hover:after {
   border-radius: 16px;
   text-shadow: 2px 2px 5px black;
 }
-
+.about-date-area .date-separator {
+  margin-top: 0;
+  font-size: 5.8rem;
+  line-height: 4.5rem;
+  color: #FAC336;
+  padding: 10px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  text-shadow: 2px 2px 5px black;
+}
 .about-date-area .date span {
   position: relative;
   right: auto;

@@ -47,7 +47,7 @@
       }
 
       .email-container {
-        background: #fdf2f2;
+        background: linear-gradient(90deg, rgba(250,212,212,1) 0%, rgba(217,227,250,1) 100%);
         background-size: cover;
       }
 
@@ -74,7 +74,7 @@
 
       button {
         font: inherit;
-        background-color: #4f9ff5;
+        background: linear-gradient(90deg, rgba(112,0,0,1) 0%, rgba(20,55,142,1) 100%);
         border: none;
         padding: 10px;
         text-transform: uppercase;

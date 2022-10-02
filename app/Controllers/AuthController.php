@@ -56,12 +56,12 @@ class AuthController extends BaseController
         $option = $this->request->getVar('day');
 
         if($option == ""){
-            session()->setFlashdata('error', 'Silahkan pilih hari terlebih dahulu');
+            session()->setFlashdata('error', 'Silahkan pilih kategori terlebih dahulu');
             return redirect()->to(base_url()."/#registration");
         }
 
         foreach($option as $day){
-            if($day == 'Day 1'){
+            if($day == 'HTML'){
                 $model 		= new EventModel();
                 $check_email= $model->check_email($email);
                 $db      	= \Config\Database::connect();
@@ -85,7 +85,7 @@ class AuthController extends BaseController
                         $data = $model->listing();
                         $pendaftar = count($data);
                         
-                        $batas = strtotime(date("15-10-2022 23:59:59"));
+                        $batas = strtotime(date("8-10-2022 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             if($pendaftar >= $total){
@@ -96,13 +96,13 @@ class AuthController extends BaseController
                             $urut = $Tpeserta->countAllResults()+1;
                             $emailTemplate = view("email1.php");
                             $emailTemplate = str_replace("[nama]",$nama,$emailTemplate);
-                            $emailTemplate = str_replace("[hari ke]","1",$emailTemplate);
-                            $emailTemplate = str_replace("[Tema hari itu]","It's a First Step",$emailTemplate);
-                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","16 Oktober 2022",$emailTemplate);
+                            $emailTemplate = str_replace("[hari ke]","HTML - Framework",$emailTemplate);
+                            $emailTemplate = str_replace("[Tema hari itu]","Zero to Front-end Hero",$emailTemplate);
+                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","8 Oktober 2022",$emailTemplate);
                             $email_smtp = \Config\Services::email();
                             $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
-                            $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta Workshop 2022 Day 1");
+                            $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta Workshop 2022 HTML - Framework");
                             // $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai Peserta di acara SEMNASTI 2022. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br /></div><div>(Kasih tau nggak yaa xixixi)</div><div><br /></div><div>Salam, SEMNASTI 2022</div>");
                             $email_smtp->setMessage($emailTemplate);
                             $kirim = $email_smtp->send();
@@ -122,7 +122,7 @@ class AuthController extends BaseController
                         }
                     }
                 }
-            } elseif ($day == 'Day 2') {
+            } elseif ($day == 'C++') {
                 $model 		= new EventModel();
                 $check_email= $model->check_email($email);
                 $db      	= \Config\Database::connect();
@@ -146,7 +146,7 @@ class AuthController extends BaseController
                         $data = $model->listing();
                         $pendaftar = count($data);
                         
-                        $batas = strtotime(date("15-10-2023 23:59:59"));
+                        $batas = strtotime(date("8-10-2023 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             if($pendaftar >= $total){
@@ -155,15 +155,15 @@ class AuthController extends BaseController
                                 return redirect()->to(base_url()."/#registration");
                             }
                             $urut = $Tpeserta->countAllResults()+1;
-                            $emailTemplate = file_get_contents(base_url()."/home/email2");
+                            $emailTemplate = view("email1.php");
                             $emailTemplate = str_replace("[nama]",$nama,$emailTemplate);
-                            $emailTemplate = str_replace("[hari ke]","2",$emailTemplate);
+                            $emailTemplate = str_replace("[hari ke]","C++ - Github",$emailTemplate);
                             $emailTemplate = str_replace("[Tema hari itu]","To Get The Best Project",$emailTemplate);
-                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","17 Oktober 2022",$emailTemplate);
+                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","8 Oktober 2022",$emailTemplate);
                             $email_smtp = \Config\Services::email();
                             $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
-                            $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta Workshop 2022 Day 2");
+                            $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta Workshop 2022 C++ - Github");
                             // $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai Peserta di acara SEMNASTI 2022. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br /></div><div>(Kasih tau nggak yaa xixixi)</div><div><br /></div><div>Salam, SEMNASTI 2022</div>");
                             $email_smtp->setMessage($emailTemplate);
                             $kirim = $email_smtp->send();
@@ -209,11 +209,11 @@ class AuthController extends BaseController
                 foreach ($results1 as $row) {
                     $emailTemplate = view("emailsertif1.php");
                     $emailTemplate = str_replace("[nama]", $row->name, $emailTemplate);
-                    $emailTemplate = str_replace("[Tanggal pelaksanaan]", "16 Oktober 2022", $emailTemplate);
+                    $emailTemplate = str_replace("[Tanggal pelaksanaan]", "8 Oktober 2022", $emailTemplate);
                     $email_smtp = \Config\Services::email();
                     $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                     $email_smtp->setTo("$row->email");
-                    $email_smtp->setSubject("📢REMINDER Workshop Day 1📢");
+                    $email_smtp->setSubject("📢REMINDER Workshop 2022📢");
                     $email_smtp->setMessage($emailTemplate);
                     $kirim = $email_smtp->send();
                     $total++;
@@ -234,7 +234,7 @@ class AuthController extends BaseController
                     $email_smtp = \Config\Services::email();
                     $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                     $email_smtp->setTo("$row->email");
-                    $email_smtp->setSubject("📢REMINDER Workshop Day 1📢");
+                    $email_smtp->setSubject("📢REMINDER Workshop 2022📢");
                     $email_smtp->setMessage($emailTemplate);
                     $kirim = $email_smtp->send();
                     $total++;
@@ -254,7 +254,7 @@ class AuthController extends BaseController
                     $email_smtp = \Config\Services::email();
                     $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                     $email_smtp->setTo("$row->email");
-                    $email_smtp->setSubject("📢REMINDER Workshop Day 1📢");
+                    $email_smtp->setSubject("📢REMINDER Workshop 2022📢");
                     $email_smtp->setMessage($emailTemplate);
                     $kirim = $email_smtp->send();
                     $total++;
@@ -285,7 +285,7 @@ class AuthController extends BaseController
             $email_smtp = \Config\Services::email();
             $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
             $email_smtp->setTo("$row->email");
-            $email_smtp->setSubject("📢Konfirmasi Pembayaran📢");
+            $email_smtp->setSubject("📢Konfirmasi Pembayaran Workshop 2022📢");
             $email_smtp->setMessage($emailTemplate);
             $kirim = $email_smtp->send();
         }
