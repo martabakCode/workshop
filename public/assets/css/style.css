@@ -87,7 +87,7 @@ img {
 
 @media screen and (max-width: 770px) {
   #speaker{
-    height: 140vh;
+    height: 160vh;
   }
   .speaker-box {
     width: 100%;
@@ -158,7 +158,7 @@ input.checkbox2 {
   .lgx-banner-info-circle #lgx-countdown .lgx-hr,
   .lgx-banner-info-circle #lgx-countdown .lgx-min,
   .lgx-banner-info-circle #lgx-countdown .lgx-sec {
-  color: #b95a06;
+  color: #ffffff;
 }
   .box-check {
     display: flex;
@@ -193,7 +193,7 @@ input.checkbox2 {
     padding-top: 100px;
   }
   .lgx-banner-info-circle .info-circle-inner .date{
-    color: #65350c;
+    color: #ffffff;
   }
 }
 #preloader {

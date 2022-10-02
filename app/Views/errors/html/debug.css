@@ -169,7 +169,7 @@ td {
     padding: 0.2rem 0.5rem 0.2rem 0;
 }
 tr:hover td {
-    background: #f1f1f1;
+    background: #ffffff;
 }
 td pre {
     white-space: pre-wrap;
