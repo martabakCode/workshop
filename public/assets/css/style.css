@@ -1,0 +1,285 @@
+img {
+  width: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  margin-bottom: 2rem;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.card > div {
+  padding: 2rem;
+}
+
+.card:nth-child(even) img {
+  order: 2;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .card {
+    display: block;
+  }
+}
+
+#speaker {
+  width: 100%;
+  /* padding: 50px 0; */
+  height: 110vh;
+}
+#speaker h2 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Plavsky";
+  text-shadow: 2px 2px 5px black;
+}
+.speaker-text {
+  padding-bottom: 7vh;
+}
+.speaker-box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.speaker1 {
+  flex-basis: 50%;
+  text-align: center;
+  align-items: center;
+}
+.speaker2 {
+  flex-basis: 50%;
+  margin: auto;
+}
+.lgx-single-speaker2 {
+  width: 70%;
+  margin: auto;
+}
+.lgx-logo img {
+  width: auto;
+}
+
+@media screen and (max-width: 770px) {
+  #speaker{
+    height: 140vh;
+  }
+  .speaker-box {
+    width: 100%;
+    margin: auto;
+    display: inline;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  .lgx-single-speaker2 {
+    width: 90%;
+    margin: auto;
+  }
+  #speaker h2 {
+    font-size: 4rem;
+  }
+  .heading h2{
+    padding-top: 100px;
+  }
+}
+
+.lgx-registration-form h4 {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 7px;
+  text-shadow: 2px 2px 5px black;
+}
+.box-check {
+  display: flex;
+  width: 20%;
+  height: 30%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.box-check > div {
+  margin-right: 6px;
+}
+.box-check p {
+  color: white;
+  font-size: 17px;
+  padding-top: 20px;
+  text-align: left;
+  width: 50px;
+  margin-left: -1px;
+  text-shadow: 2px 2px 5px black;
+}
+.box1 {
+  flex-basis: 10%;
+  margin: auto;
+}
+.box2 {
+  flex-basis: 30%;
+  margin: auto;
+}
+input.checkbox1 {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+input.checkbox2 {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+.lgx-registration-form {
+  margin-top: -10vh;
+}
+@media screen and (max-width: 770px) {
+  .lgx-banner-info-circle #lgx-countdown .lgx-days,
+  .lgx-banner-info-circle #lgx-countdown .lgx-hr,
+  .lgx-banner-info-circle #lgx-countdown .lgx-min,
+  .lgx-banner-info-circle #lgx-countdown .lgx-sec {
+  color: #b95a06;
+}
+  .box-check {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  .box1 {
+    flex-basis: 20%;
+  }
+  .box2 {
+    flex-basis: 20%;
+    margin: auto;
+  }
+  .box-check p {
+    color: white;
+    font-size: 14px;
+    margin-left: 2px;
+  }
+  .lgx-registration-form h4 {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 7px;
+  }
+  .lgx-banner {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-left: -50px;
+  }
+  .lgx-banner-info-circle {
+    padding-top: 100px;
+  }
+  .lgx-banner-info-circle .info-circle-inner .date{
+    color: #65350c;
+  }
+}
+#preloader {
+  background: linear-gradient(90deg, rgba(167,3,2,1) 0%, rgba(20,55,142,1) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+#preloader img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.textt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+}
+
+.textt img {
+  animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating{
+	0%,100%{
+		transform: skewY(-0deg) translate(0,-20px);
+	}
+	50%{
+		transform: skewY(-0deg) translate(0,20px);
+	}
+}
+
+.boxes{
+  margin: auto;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"]+label{
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #664afe;
+  cursor:pointer;
+}
+input[type="checkbox"] + label:last-child{
+  margin-bottom: 0;
+}
+input[type="checkbox"] + label:before{
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border:4px solid #e78f37;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: all 0.5s, border-color .08s;
+  background-color: #ca6728;
+}
+input[type="checkbox"]:checked + label:before{
+  width: 20px;
+  top:-5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+  background-color:transparent ;
+}
