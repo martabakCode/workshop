@@ -12,12 +12,12 @@
       <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
         <ul class="flex flex-col pl-0 mb-0">
           <li class="mt-0.5 w-full">
-            <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="/pages/dashboard.html">
+            <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="/admin/dashboard">
               <div class="bg-gradient-to-tl from-blue-700 to-red-700 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                 <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <title>Home</title>
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(-171-6.000000, 439.000000)" fill="#FFFFFF" fill-rule="nonzero">
                       <g transform="translate(1716.000000, 291.000000)">
                         <g transform="translate(0.000000, 148.000000)">
                           <path
@@ -84,18 +84,6 @@
             </a>
           </li>
           
-          <li class="mt-0.5 w-full">
-            <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors" href="/pages/sign-up.html">
-              <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12px" height="20px" viewBox="0 0 64 64" aria-labelledby="title"
-              aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <title>User</title>
-                  <path class="fill-slate-800" d="M50 51c-10-1.9-10-5-10-7v-3.2c3.6-3.3 6-8.7 6-14.8v-9.6C46 6 38.6 2 32 2S18 6 18 16.4V26c0 6.1 2.4 11.5 6 14.8V44c0 2 0 5.2-10 7A14.5 14.5 0 0 0 2.4 62h59.2A14.7 14.7 0 0 0 50 51z"></path>
-              </svg>  
-              </div>
-              <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Profile</span>
-            </a>
-          </li>
         </ul>
       </div>
 

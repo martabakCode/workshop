@@ -274,7 +274,7 @@
                 <h6>Sales overview</h6>
                 <p class="leading-normal text-sm">
                   <i class="fa fa-arrow-up text-lime-500"></i>
-                  <span class="font-semibold">4% more</span> in 2021
+                  <span class="font-semibold">4% more</span> in 2022
                 </p>
               </div>
               <div class="flex-auto p-4">
@@ -980,7 +980,7 @@
                 <h6>Sales overview</h6>
                 <p class="leading-normal text-sm">
                   <i class="fa fa-arrow-up text-lime-500"></i>
-                  <span class="font-semibold">4% more</span> in 2021
+                  <span class="font-semibold">4% more</span> in 2022
                 </p>
               </div>
               <div class="flex-auto p-4">

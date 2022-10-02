@@ -1,6 +1,7 @@
 <?= $this->extend('admin/layout') ?>
 
 <?= $this->section('content') ?>
+    <?php if($masterEvent){?>
     <div class="flex flex-wrap -mx-3">
         <div class="flex-none w-full max-w-full px-3">
         <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
@@ -11,6 +12,7 @@
                         <form action="<?= base_url("/reminder"); ?>" method="post">
                         <?= csrf_field(); ?>
                             <label for="reminder">Pilih reminder: </label>
+                            <input type="hidden" name="idEvents" value="<?= $masterEvent[0]['id'];?>">
                             <select id="selection" name="selection" class="w-1/3 mr-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5">
                                 <option value="D1 H-2">Day 1 H-2</option>
                                 <option value="D1 H-1">Day 1 H-1</option>
@@ -20,31 +22,7 @@
                         </form>
                     </div>
                 </div>
-                <?php
-                    $inputs = session()->getFlashdata('inputs');
-                    $errors = session()->getFlashdata('errors');
-                    $error = session()->getFlashdata('error');
-                    $success = session()->getFlashdata('success');
-                    if(!empty($errors)){ ?>
-                    <div class="alert alert-danger" role="alert">
-                        <ul>
-                        <?php foreach ($errors as $errors) : ?>
-                            <li><?= esc($errors) ?></li>
-                        <?php endforeach ?>
-                        </ul>
-                    </div>
-                    <?php
-                    } 
-                    if(!empty($error)){ ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?= esc($error) ?><br />
-                    </div>
-                    <?php } 
-                    if(!empty($success)){?>
-                    <div class="alert alert-success" role="alert">
-                        <?= esc($success) ?><br />
-                    </div>
-                <?php } ?>
+                
             </div>
             <div class="flex-auto px-0 pt-0 pb-2">
             <div class="p-4 overflow-x-auto">
@@ -103,4 +81,17 @@
         </div>
         </div>
     </div>
+    <?php }else {?>
+        <div class="flex flex-wrap -mx-3">
+            <div class="flex-none w-full max-w-full px-3">
+                <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
+                    <div class="p-6 pb-0 mb-5 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
+                        <div class="grid grid-cols-12 gap-4">
+                            <h6 class="col-span-6 font-bold text-xl">Data Empty</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php }?>
 <?= $this->endSection() ?>

@@ -7,7 +7,31 @@
             <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
             
             <h6 class="font-bold">Master Events Table <a class="inline-block absolute right-5 px-6 py-3 font-bold text-center text-white align-middle transition-all ease-in border-0 rounded-lg select-none shadow-soft-md bg-150 bg-x-25 leading-pro text-xs bg-gradient-to-tl from-blue-700 to-red-700 hover:shadow-soft-2xl hover:scale-102" href="/admin/masterevents/new">Tambah Acara</a></h6>
-            
+            <?php
+                    $inputs = session()->getFlashdata('inputs');
+                    $errors = session()->getFlashdata('errors');
+                    $error = session()->getFlashdata('error');
+                    $success = session()->getFlashdata('success');
+                    if(!empty($errors)){ ?>
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                        <?php foreach ($errors as $errors) : ?>
+                            <li><?= esc($errors) ?></li>
+                        <?php endforeach ?>
+                        </ul>
+                    </div>
+                    <?php
+                    } 
+                    if(!empty($error)){ ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= esc($error) ?><br />
+                    </div>
+                    <?php } 
+                    if(!empty($success)){?>
+                    <div class="alert alert-success" role="alert">
+                        <?= esc($success) ?><br />
+                    </div>
+                <?php } ?>
             </div>
             <div class="flex-auto px-0 pt-0 pb-2">
             <div class="p-4 overflow-x-auto">

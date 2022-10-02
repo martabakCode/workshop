@@ -85,7 +85,7 @@ class AuthController extends BaseController
                         $data = $model->listing();
                         $pendaftar = count($data);
                         
-                        $batas = strtotime(date("15-10-2023 23:59:59"));
+                        $batas = strtotime(date("15-10-2022 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             if($pendaftar >= $total){
@@ -197,10 +197,10 @@ class AuthController extends BaseController
 		$method = $_SERVER['REQUEST_METHOD'];
 		if($method == "POST"){
             $db = \Config\Database::connect();
-            $query1   = $db->query('SELECT name, email FROM dataEvents WHERE idEvents = 2');
+            $query1   = $db->query('SELECT name, email FROM dataEvents WHERE idEvents ='.$this->request->getPost('idEvents'));
             $results1 = $query1->getResult();
             $select = $this->request->getVar('selection');
-            $total = 1;
+            $total = 0;
             if($select == ""){
                 session()->setFlashdata('error', 'Silahkan pilih reminder terlebih dahulu');
             }
@@ -218,6 +218,7 @@ class AuthController extends BaseController
                     $kirim = $email_smtp->send();
                     $total++;
                 }
+                
                 if ($total == count($results1)) {
                     session()->setFlashdata('success', 'Berhasil mengirim reminder');
                     return redirect()->to(base_url()."/admin/masterevents");
@@ -275,6 +276,19 @@ class AuthController extends BaseController
     }
 
     public function pay($id = null){
-        $data = new EventModel();
+        $db = \Config\Database::connect();
+        $query1   = $db->query('SELECT name, email, idEvents FROM dataEvents WHERE id = '.$id);
+        $results1 = $query1->getResult();
+        foreach ($results1 as $row) {
+            $emailTemplate = view("emailpay.php");
+            $emailTemplate = str_replace("[nama]", $row->name, $emailTemplate);
+            $email_smtp = \Config\Services::email();
+            $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
+            $email_smtp->setTo("$row->email");
+            $email_smtp->setSubject("📢Konfirmasi Pembayaran📢");
+            $email_smtp->setMessage($emailTemplate);
+            $kirim = $email_smtp->send();
+        }
+        return redirect()->to(base_url()."/admin/masterevents");
     }
 }

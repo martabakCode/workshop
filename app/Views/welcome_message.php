@@ -145,7 +145,7 @@
                                                 <h3 class="date"><b class="lgx-counter">15</b> <span>October</span></h3>
                                                 <div class="lgx-countdown-area">
                                                     <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
-                                                    <div id="lgx-countdown" data-date="2021/10/15"></div>
+                                                    <div id="lgx-countdown" data-date="2022/10/15"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,7 +189,7 @@
                                         </p>
                                         <div class="about-date-area">
                                             <h4 class="date text-center"><span class="text-center">16</span></h4>
-                                            <p class="text-white"><span class="text-white">October 2021</span> Zoom Meeting</p>
+                                            <p class="text-white"><span class="text-white">October 2022</span> Zoom Meeting</p>
                                         </div>
                                     </div>
                                 </div>
