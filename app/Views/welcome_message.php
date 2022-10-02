@@ -322,11 +322,11 @@
                             <!--//footer-area-->
                             <div class="lgx-footer-single">
                                 <h3 class="footer-title">Contact Us </h3>
-                                <a href="https://wa.me/6282243090750" target="_blank" style="color: #ffffff80; text-decoration: none;">
-                                    <p>0822-4309-0750 (Naufal)</p>
+                                <a href="https://wa.me/6288806158461" target="_blank" style="color: #ffffff80; text-decoration: none;">
+                                    <p>+62 888-0615-8461 (Hanif)</p>
                                 </a>
-                                <a href="https://wa.me/6289659615260" target="_blank" style="color: #ffffff80; text-decoration: none;">
-                                    <p>0896-5961-5260 (Deo)</p>
+                                <a href="https://wa.me/6285878900639" target="_blank" style="color: #ffffff80; text-decoration: none;">
+                                    <p>+62 858-7890-0639 (Raafi)</p>
                                 </a>
                             </div>
                             <div class="lgx-footer-single">
