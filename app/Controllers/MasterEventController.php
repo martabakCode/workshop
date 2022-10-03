@@ -18,7 +18,7 @@ class MasterEventController extends ResourceController
     {
         $db      = \Config\Database::connect();
         $masterEvent = $db->table('masterEvents');
-        $masterEvent->select('masterEvents.id,masterEvents.judul,dataEvents.nim,dataEvents.name,
+        $masterEvent->select('masterEvents.id,masterEvents.judul,dataEvents.id as idEvent,dataEvents.nim,dataEvents.name,
         dataEvents.email,dataEvents.phone,dataEvents.instansi');
         $masterEvent->where('masterEvents.id',$id);
         $masterEvent->join('dataEvents', 'masterEvents.id = dataEvents.idEvents');
