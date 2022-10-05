@@ -81,17 +81,26 @@ class EventController extends ResourceController
     public function update($id = null)
     {
         $validation =  \Config\Services::validation();
-        $validation->setRules(['judul' => 'required']);
+        $validation->setRules([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'instansi' => 'required'
+        ]);
         $isDataValid = $validation->withRequest($this->request)->run();
         if($isDataValid){
             $event = new EventModel();
             $query = [
-                "judul" => $this->request->getPost('judul')
+                "nim" => $this->request->getPost('nim'),
+                "name" => $this->request->getPost('name'),
+                "email" => $this->request->getPost('email'),
+                "phone" => $this->request->getPost('phone'),
+                "instansi" => $this->request->getPost('instansi')
             ];
             $event->update($id,$query);
             return redirect('admin/events');
         }
-        return redirect()->to('admin/acara/'.$id.'/edit');
+        return redirect()->to('admin/events/'.$id.'/edit');
     }
 
     /**
