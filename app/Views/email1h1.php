@@ -128,7 +128,7 @@
             <p>
               Ini merupakan pesan pengingat Workshop : Kick Start Day 1 dengan
               tema “Zero to Front End Hero” <br />
-              📆 Hari/Tgl : 8 Oktober 202 <br />
+              📆 Hari/Tgl : 15 Oktober 202 <br />
               ⏰ Pukul &nbsp; &nbsp; &nbsp; : 07.30 - 15.00 WIB <br />
               📍 Tempat&nbsp; &nbsp;: Gedung D.2.B dan Gedung D.2.H Universitas
               Dian Nuswantoro <br />
@@ -181,9 +181,9 @@
                 href="https://wa.me/6288806158461"
                 target="_blank"
                 style="color: rgb(93, 139, 247)"
-                >Hanif</a
+                >Dirga</a
               >
-              : +62 888-0615-8461<br />
+              : +62 823-2616-4669<br />
               📞
               <a
                 href="https://wa.me/6285878900639"

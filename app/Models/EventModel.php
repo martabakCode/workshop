@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class EventModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'dataEvents';
+    protected $table            = 'dataevents';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;

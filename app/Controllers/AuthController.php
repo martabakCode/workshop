@@ -65,7 +65,7 @@ class AuthController extends BaseController
                 $model 		= new EventModel();
                 $check_email= $model->check_email($email);
                 $db      	= \Config\Database::connect();
-                $Tpeserta  	= $db->table('dataEvents')->where('idEvents',1);
+                $Tpeserta  	= $db->table('dataevents')->where('idEvents',1);
                 if($Tpeserta->countAllResults() < 40){
                     if($check_email){
                         session()->setFlashdata('inputs', $this->request->getPost());
@@ -97,8 +97,8 @@ class AuthController extends BaseController
                             $emailTemplate = view("email1.php");
                             $emailTemplate = str_replace("[nama]",$nama,$emailTemplate);
                             $emailTemplate = str_replace("[hari ke]","HTML - Framework",$emailTemplate);
-                            $emailTemplate = str_replace("[Tema hari itu]","Zero to Front-end Hero",$emailTemplate);
-                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","8 Oktober 2022",$emailTemplate);
+                            $emailTemplate = str_replace("[Tema hari itu]","Zero to Front-end Hero & The Programmer Starter Kit ",$emailTemplate);
+                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","15 Oktober 2022",$emailTemplate);
                             $email_smtp = \Config\Services::email();
                             $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
@@ -126,7 +126,7 @@ class AuthController extends BaseController
                 $model 		= new EventModel();
                 $check_email= $model->check_email($email);
                 $db      	= \Config\Database::connect();
-                $Tpeserta  	= $db->table('dataEvents')->where('idEvents',2);
+                $Tpeserta  	= $db->table('dataevents')->where('idEvents',2);
                 if($Tpeserta->countAllResults() < 40){
                     if($check_email){
                         session()->setFlashdata('inputs', $this->request->getPost());
@@ -159,7 +159,7 @@ class AuthController extends BaseController
                             $emailTemplate = str_replace("[nama]",$nama,$emailTemplate);
                             $emailTemplate = str_replace("[hari ke]","C++ - Github",$emailTemplate);
                             $emailTemplate = str_replace("[Tema hari itu]","To Get The Best Project",$emailTemplate);
-                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","8 Oktober 2022",$emailTemplate);
+                            $emailTemplate = str_replace("[Tanggal pelaksanaan]","15 Oktober 2022",$emailTemplate);
                             $email_smtp = \Config\Services::email();
                             $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
@@ -197,7 +197,7 @@ class AuthController extends BaseController
 		$method = $_SERVER['REQUEST_METHOD'];
 		if($method == "POST"){
             $db = \Config\Database::connect();
-            $query1   = $db->query('SELECT name, email FROM dataEvents WHERE idEvents ='.$this->request->getPost('idEvents'));
+            $query1   = $db->query('SELECT name, email FROM dataevents WHERE idEvents ='.$this->request->getPost('idEvents'));
             $results1 = $query1->getResult();
             $select = $this->request->getVar('selection');
             $total = 0;
@@ -209,7 +209,7 @@ class AuthController extends BaseController
                 foreach ($results1 as $row) {
                     $emailTemplate = view("emailsertif1.php");
                     $emailTemplate = str_replace("[nama]", $row->name, $emailTemplate);
-                    $emailTemplate = str_replace("[Tanggal pelaksanaan]", "8 Oktober 2022", $emailTemplate);
+                    $emailTemplate = str_replace("[Tanggal pelaksanaan]", "15 Oktober 2022", $emailTemplate);
                     $email_smtp = \Config\Services::email();
                     $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
                     $email_smtp->setTo("$row->email");
@@ -277,7 +277,7 @@ class AuthController extends BaseController
 
     public function pay($id = null){
         $db = \Config\Database::connect();
-        $query1   = $db->query('SELECT name, email, idEvents FROM dataEvents WHERE id = '.$id);
+        $query1   = $db->query('SELECT name, email, idEvents FROM dataevents WHERE id = '.$id);
         $results1 = $query1->getResult();
         foreach ($results1 as $row) {
             $emailTemplate = view("emailpay.php");

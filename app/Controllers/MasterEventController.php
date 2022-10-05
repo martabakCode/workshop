@@ -17,11 +17,11 @@ class MasterEventController extends ResourceController
     public function show($id = null)
     {
         $db      = \Config\Database::connect();
-        $masterEvent = $db->table('masterEvents');
-        $masterEvent->select('masterEvents.id,masterEvents.judul,dataEvents.id as idEvent,dataEvents.nim,dataEvents.name,
-        dataEvents.email,dataEvents.phone,dataEvents.instansi');
-        $masterEvent->where('masterEvents.id',$id);
-        $masterEvent->join('dataEvents', 'masterEvents.id = dataEvents.idEvents');
+        $masterEvent = $db->table('masterevents');
+        $masterEvent->select('masterevents.id,masterevents.judul,dataevents.id as idEvent,dataevents.nim,dataevents.name,
+        dataevents.email,dataevents.phone,dataevents.instansi');
+        $masterEvent->where('masterevents.id',$id);
+        $masterEvent->join('dataevents', 'masterevents.id = dataevents.idEvents');
         $data['masterEvent'] = $masterEvent->get()->getResultArray();
         // return print_r($data['masterEvent']->getResultArray());
         return view('admin/pages/masterevents/detail',$data);

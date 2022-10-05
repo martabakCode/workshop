@@ -54,15 +54,15 @@ class DataEventsMigration extends Migration
 
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('idEvents', 'masterEvents', 'id', 'cascade', 'null');
-        $this->forge->createTable('dataEvents');
+        $this->forge->addForeignKey('idEvents', 'masterevents', 'id', 'cascade', 'null');
+        $this->forge->createTable('dataevents');
         $this->db->enableForeignKeyChecks();
     }
 
     public function down()
     {
         $this->db->disableForeignKeyChecks();
-        $this->forge->dropTable('dataEvents');
+        $this->forge->dropTable('dataevents');
         $this->db->enableForeignKeyChecks();
     }
 }

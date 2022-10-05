@@ -129,7 +129,7 @@
               Terima kasih telah mengikuti event Workshop : Kick Start dengan
               tema “Zero to Front End Hero” yang diselenggarakan oleh Himpunan
               Mahasiswa Teknik Informatika (HMTI) Universitas Dian Nuswantoro
-              Semarang pada tanggal 8 Oktober 2022 dan 15 Oktober 2022 <br />
+              Semarang pada tanggal 15 Oktober 2022 <br />
               <br />
               ini kami lampirkan sertifikat sebagai bukti keikutsertaan Anda:
             </p>
@@ -155,9 +155,9 @@
                 href="https://wa.me/6288806158461"
                 target="_blank"
                 style="color: rgb(93, 139, 247)"
-                >Hanif</a
+                >Dirga</a
               >
-              : +62 888-0615-8461<br />
+              : +62 823-2616-4669<br />
               📞
               <a
                 href="https://wa.me/6285878900639"

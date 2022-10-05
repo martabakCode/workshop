@@ -16,7 +16,7 @@
     <!--  FAVICON AND TOUCH ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/logo.png" />
     <link rel="icon" type="image/x-icon" sizes="76x76" href="/assets/img/favicon/logo.png" />
-    <link rel="manifest" href="/assets/img/favicon/manifest.json">
+    <link rel="icon" type="image/png" href="/assets/img/favicon/logo.png" />
     <meta name="theme-color" content="#ffffff">
     <link href="/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.4" rel="stylesheet" />   
 
@@ -25,19 +25,6 @@
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="/assets/libs/fontawesome/css/font-awesome.min.css" media="all" />
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="/assets/libs/maginificpopup/magnific-popup.css" media="all" />
-
-    <!-- Time Circle -->
-    <link rel="stylesheet" href="/assets/libs/timer/TimeCircles.css" media="all" />
-
-    <!-- Circle Type -->
-    <link rel="stylesheet" href="/assets/libs/circletype.min.js" media="all" />
-
-    <!-- OWL CAROUSEL CSS -->
-    <link rel="stylesheet" href="/assets/libs/owlcarousel/owl.carousel.min.css" media="all" />
-    <link rel="stylesheet" href="/assets/libs/owlcarousel/owl.theme.default.min.css" media="all" />
 
     <!-- GOOGLE FONT -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,700%7cPoppins:300,400,400i,600,600i,700,800,900" />
@@ -49,8 +36,6 @@
     <link id="lgx-master-style" rel="stylesheet" href="/assets/css/style-default.min.css" media="all" />
     <link rel="stylesheet" href="/assets/css/style.css" media="all" />
 
-    <!-- MODERNIZER CSS  -->
-    <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
         @media screen and (min-width:800px) {
             .tengah {
@@ -142,10 +127,10 @@
                                     <div class="lgx-banner-info-area">
                                         <div class="lgx-banner-info-circle">
                                             <div class="info-circle-inner">
-                                                <h3 class="date"><b class="lgx-counter">8</b> <span>Oktober</span></h3>
+                                                <h3 class="date"><b class="lgx-counter">15</b> <span>Oktober</span></h3>
                                                 <div class="lgx-countdown-area">
                                                     <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
-                                                    <div id="lgx-countdown" data-date="2022/10/8"></div>
+                                                    <div id="lgx-countdown" data-date="2022/10/15"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,8 +138,8 @@
                                             <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
                                             <!--banner-info-margin-->
                                             <h3 class="subtitle"><strong class="text-yellow-500">WORKSHOP <script>document.write(new Date().getFullYear())</script></strong></h3>
-                                            <h2 class="title"><strong>Zero to Front-end Hero</strong></h2>
-                                            <h3 class="location"><i class="fa fa-map-marker"></i> Gedung D Universitas Dian Nuswantoro.</h3>
+                                            <h2 class="title"><strong>Zero to Front-end Hero &<br>The Programmer Starter Kit </strong></h2>
+                                            <h3 class="location"><i class="fa fa-map-marker"></i> Gedung D.2.H & D.2.I Universitas Dian Nuswantoro.</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +161,7 @@
                 <div class="lgx-inner">
                     <div class="container">
                         <section class="card">
-                            <img src="/assets/img/poster1.png" alt="poster">
+                            <img src="/assets/img/poster1.png" alt="poster" loading=”lazy”>
                             <div class="col-sm-12">
                                 <div class="lgx-about-content-area">
                                     <div class="lgx-heading">
@@ -206,15 +191,8 @@
                                         </p>
                                     </div>
                                         <div class="about-date-area">
-                                            <h4 class="date text-center"><span class="text-center">8</span></h4>
-                                            <p class="text-white"><span class="text-white">Oktober 2022</span> Gedung D.2.B Universitas Dian Nuswantoro</p>
-                                        </div>
-                                        <div class="about-date-area">
-                                            <h4 class="date-separator text-center"><span class="text-center">&</span></h4>
-                                        </div>
-                                        <div class="about-date-area">
                                             <h4 class="date text-center"><span class="text-center">15</span></h4>
-                                            <p class="text-white"><span class="text-white">Oktober 2022</span> Gedung D.2.B Universitas Dian Nuswantoro</p>
+                                            <p class="text-white"><span class="text-white">Oktober 2022</span> Gedung D.2.H & D.2.I<br>Universitas Dian Nuswantoro</p>
                                         </div>
                                 </div>
                             </div>
@@ -229,33 +207,40 @@
             <div class="speaker-text">
                 <h2>Pembicara kita</h2>
             </div>
-            <div class="speaker-box">
-                <div class="speaker1">
-                    <div class="lgx-single-speaker2 lgx-single-speaker3">
-                        <figure>
-                            <a class="profile-img"><img src="/assets/img/speakers/mas_ilham.png" alt="speaker" /></a>
-                            <figcaption>
-                                <div class="speaker-info">
-                                    <h3 class="title">Ilham Nur Ramadhan</h3>
-                                    <h4 class="subtitle">Backend Developer </h4>
-                                </div>
-                            </figcaption>
-                        </figure>
+            <div class="flex flex-wrap">
+                <div class="w-1/2 lg:w-1/2">
+                    <div class="speaker1">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <a class="profile-img"><img src="/assets/img/speakers/mas_ilham.png" alt="speaker" loading=”lazy”/></a>
+                                <figcaption>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Ilham Nur Ramadhan</h3>
+                                        <h4 class="subtitle">Backend Developer </h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
-                <div class="speaker2">
-                    <div class="lgx-single-speaker2 lgx-single-speaker3">
-                        <figure>
-                            <a class="profile-img"><img src="/assets/img/speakers/mas_naufal.png" alt="speaker" /></a>
-                            <figcaption>
-                                <div class="speaker-info">
-                                    <h3 class="title">Naufal Iksham</h3>
-                                    <h4 class="subtitle">FrontEnd Developer</h4>
-                                </div>
-                            </figcaption>
-                        </figure>
+                <div class="w-1/2 lg:w-1/2">
+                    <div class="speaker2">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <a class="profile-img"><img src="/assets/img/speakers/mas_naufal.png" alt="speaker" loading=”lazy”/></a>
+                                <figcaption>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Naufal Iksham</h3>
+                                        <h4 class="subtitle">FrontEnd Developer</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
+           
+                
+                
             </div>
         </section>
 
@@ -347,7 +332,7 @@
                             <div class="lgx-footer-single">
                                 <h3 class="footer-title">Contact Us </h3>
                                 <a href="https://wa.me/6288806158461" target="_blank" style="color: #ffffff80; text-decoration: none;">
-                                    <p>+62 888-0615-8461 (Hanif)</p>
+                                    <p>+62 823-2616-4669 (Dirga)</p>
                                 </a>
                                 <a href="https://wa.me/6285878900639" target="_blank" style="color: #ffffff80; text-decoration: none;">
                                     <p>+62 858-7890-0639 (Raafi)</p>
@@ -395,21 +380,12 @@
     <!-- BOOTSTRAP JS  -->
     <script src="/assets/libs/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Smooth Scroll  -->
-    <script src="/assets/libs/jquery.smooth-scroll.js"></script>
-
     <!-- SKILLS SCRIPT  -->
     <script src="/assets/libs/jquery.validate.js"></script>
 
 
-    <!-- CUSTOM GOOGLE MAP -->
-    <script type="text/javascript" src="/assets/libs/gmap/jquery.googlemap.js"></script>
-
     <!-- adding magnific popup js library -->
     <script type="text/javascript" src="/assets/libs/maginificpopup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Owl Carousel  -->
-    <script src="/assets/libs/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- COUNTDOWN   -->
     <script src="/assets/libs/countdown.js"></script>
@@ -419,19 +395,10 @@
     <script src="/assets/libs/waypoints.min.js"></script>
     <script src="/assets/libs/counterup/jquery.counterup.min.js"></script>
 
-    <!-- SMOTH SCROLL -->
-    <script src="/assets/libs/jquery.smooth-scroll.min.js"></script>
-    <script src="/assets/libs/jquery.easing.min.js"></script>
 
     <!-- type js -->
     <script src="/assets/libs/typed/typed.min.js"></script>
 
-    <!-- header parallax js -->
-    <script src="/assets/libs/header-parallax.js"></script>
-
-    <!-- instafeed js -->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>-->
-    <script src="/assets/libs/instafeed.min.js"></script>
 
     <!-- CUSTOM SCRIPT  -->
     <script src="/assets/js/custom.script.js"></script>

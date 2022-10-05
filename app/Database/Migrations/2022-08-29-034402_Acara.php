@@ -28,11 +28,11 @@ class Acara extends Migration
             ]
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('masterEvents');
+        $this->forge->createTable('masterevents');
     }
 
     public function down()
     {
-        $this->forge->dropTable('masterEvents');
+        $this->forge->dropTable('masterevents');
     }
 }
