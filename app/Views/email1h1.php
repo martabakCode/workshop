@@ -127,10 +127,10 @@
             <h2>Hi Future Developer</h2>
             <p>
               Ini merupakan pesan pengingat Workshop : Kick Start Day 1 dengan
-              tema “Zero to Front End Hero” <br />
+              tema “Zero to Front End Hero & The Programmer Starter Kit” <br />
               📆 Hari/Tgl : 15 Oktober 202 <br />
               ⏰ Pukul &nbsp; &nbsp; &nbsp; : 07.30 - 15.00 WIB <br />
-              📍 Tempat&nbsp; &nbsp;: Gedung D.2.B dan Gedung D.2.H Universitas
+              📍 Tempat&nbsp; &nbsp;: Gedung D.2.H dan Gedung D.2.J Universitas
               Dian Nuswantoro <br />
               <br />
               Peserta diwajibkan bergabung ke grup WhatsApp berikut untuk

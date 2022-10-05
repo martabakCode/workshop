@@ -129,7 +129,7 @@
               Terima kasih telah mendaftar Workshop 2022 dengan materi Kick
               Start yang diselenggarakan oleh Himpunan Mahasiswa Teknik
               Informatika (HMTI) Universitas Dian Nuswantoro Semarang dengan
-              mengusung tema "Zero to Front End Hero"
+              mengusung tema "Zero to Front End Hero & The Programmer Starter Kit"
             </p>
             <p>
               Bagi teman-teman yang sudah mendaftarkan diri, dimohon untuk

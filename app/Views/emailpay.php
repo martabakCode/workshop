@@ -129,7 +129,7 @@
               Terima kasih telah melakukan Registrasi Ulang Workshop dengan
               materi Kick Start yang diselenggarakan oleh Himpunan Mahasiswa
               Teknik Informatika (HMTI) Universitas Dian Nuswantoro Semarang dan
-              mengusung tema "Zero to Front End Hero"
+              mengusung tema "Zero to Front End Hero & The Programmer Starter Kit"
             </p>
             <p>
               Silahkan bergabung ke grup WhatsApp berikut untuk mendapat info

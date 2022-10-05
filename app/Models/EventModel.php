@@ -14,7 +14,7 @@ class EventModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nim','name','email','phone','instansi','idEvents'];
+    protected $allowedFields    = ['nim','name','email','phone','instansi','idEvents','status'];
 
     // Dates
     protected $useTimestamps = false;
@@ -39,9 +39,9 @@ class EventModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-    public function check_email($email){
+    public function check_email($email,$id){
         $this->select("*");
-        $this->where(['email' => $email]);
+        $this->where(['email' => $email, 'idEvents' => $id]);
         $query = $this->get();
 		return $query->getRowArray();
     }

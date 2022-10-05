@@ -127,7 +127,7 @@
             <h2>Hi [nama]</h2>
             <p>
               Terima kasih telah mengikuti event Workshop : Kick Start dengan
-              tema “Zero to Front End Hero” yang diselenggarakan oleh Himpunan
+              tema “Zero to Front End Hero & The Programmer Starter Kit” yang diselenggarakan oleh Himpunan
               Mahasiswa Teknik Informatika (HMTI) Universitas Dian Nuswantoro
               Semarang pada tanggal 15 Oktober 2022 <br />
               <br />

@@ -63,7 +63,7 @@ class AuthController extends BaseController
         foreach($option as $day){
             if($day == 'HTML'){
                 $model 		= new EventModel();
-                $check_email= $model->check_email($email);
+                $check_email= $model->check_email($email,1);
                 $db      	= \Config\Database::connect();
                 $Tpeserta  	= $db->table('dataevents')->where('idEvents',1);
                 if($Tpeserta->countAllResults() < 40){
@@ -124,7 +124,7 @@ class AuthController extends BaseController
                 }
             } elseif ($day == 'C++') {
                 $model 		= new EventModel();
-                $check_email= $model->check_email($email);
+                $check_email= $model->check_email($email,2);
                 $db      	= \Config\Database::connect();
                 $Tpeserta  	= $db->table('dataevents')->where('idEvents',2);
                 if($Tpeserta->countAllResults() < 40){
@@ -197,7 +197,7 @@ class AuthController extends BaseController
 		$method = $_SERVER['REQUEST_METHOD'];
 		if($method == "POST"){
             $db = \Config\Database::connect();
-            $query1   = $db->query('SELECT name, email FROM dataevents WHERE idEvents ='.$this->request->getPost('idEvents'));
+            $query1   = $db->query('SELECT name, email FROM dataevents WHERE idEvents ='.$this->request->getPost('idEvents').' AND status=1');
             $results1 = $query1->getResult();
             $select = $this->request->getVar('selection');
             $total = 0;
@@ -279,16 +279,22 @@ class AuthController extends BaseController
         $db = \Config\Database::connect();
         $query1   = $db->query('SELECT name, email, idEvents FROM dataevents WHERE id = '.$id);
         $results1 = $query1->getResult();
-        foreach ($results1 as $row) {
-            $emailTemplate = view("emailpay.php");
-            $emailTemplate = str_replace("[nama]", $row->name, $emailTemplate);
-            $email_smtp = \Config\Services::email();
-            $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
-            $email_smtp->setTo("$row->email");
-            $email_smtp->setSubject("📢Konfirmasi Pembayaran Workshop 2022📢");
-            $email_smtp->setMessage($emailTemplate);
-            $kirim = $email_smtp->send();
-        }
+        
+        $event = new EventModel();
+
+        $query = [
+            "status" => 1
+        ];
+        $event->update($id,$query);
+        $data = $event->where('id',$id)->first();
+        $emailTemplate = view("emailpay.php");
+        $emailTemplate = str_replace("[nama]", $data['name'], $emailTemplate);
+        $email_smtp = \Config\Services::email();
+        $email_smtp->setFrom("noreply@hmtiudinus.org", "HMTI UDINUS");
+        $email_smtp->setTo($data['email']);
+        $email_smtp->setSubject("📢Konfirmasi Pembayaran Workshop 2022📢");
+        $email_smtp->setMessage($emailTemplate);
+        $kirim = $email_smtp->send();
         return redirect()->to(base_url()."/admin/masterevents");
     }
 }

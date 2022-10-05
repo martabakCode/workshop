@@ -18,7 +18,7 @@ class MasterEventController extends ResourceController
     {
         $db      = \Config\Database::connect();
         $masterEvent = $db->table('masterevents');
-        $masterEvent->select('masterevents.id,masterevents.judul,dataevents.id as idEvent,dataevents.nim,dataevents.name,
+        $masterEvent->select('masterevents.id,masterevents.title,dataevents.id as idEvent,dataevents.nim,dataevents.name,
         dataevents.email,dataevents.phone,dataevents.instansi');
         $masterEvent->where('masterevents.id',$id);
         $masterEvent->join('dataevents', 'masterevents.id = dataevents.idEvents');
@@ -40,7 +40,7 @@ class MasterEventController extends ResourceController
         if($isDataValid){
             $masterEvent = new MasterEventModel();
             $query = [
-                "judul" => $this->request->getPost('judul')
+                "title" => $this->request->getPost('judul')
             ];
             $masterEvent->insert($query);
             return redirect('admin/masterevents');
@@ -63,7 +63,7 @@ class MasterEventController extends ResourceController
         if($isDataValid){
             $masterEvent = new MasterEventModel();
             $query = [
-                "judul" => $this->request->getPost('judul')
+                "title" => $this->request->getPost('judul')
             ];
             $masterEvent->update($id,$query);
             return redirect('admin/masterevents');

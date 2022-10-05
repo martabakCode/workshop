@@ -7,7 +7,7 @@
         <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
             <div class="p-6 pb-0 mb-5 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
                 <div class="grid grid-cols-12 gap-4">
-                <h6 class="col-span-6 font-bold text-xl"><?= $masterEvent[0]['judul'];?> </h6>
+                <h6 class="col-span-6 font-bold text-xl"><?= $masterEvent[0]['title'];?> </h6>
                     <div class="col-span-6">
                         <form action="<?= base_url("/reminder"); ?>" method="post">
                         <?= csrf_field(); ?>
@@ -64,7 +64,7 @@
                         <p class="mb-0 font-semibold leading-tight text-xs"><?= $data['instansi'] ?></p>
                     </td>
                     <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <p class="mb-0 font-semibold leading-tight text-xs"><?= $data['judul'] ?></p>
+                        <p class="mb-0 font-semibold leading-tight text-xs"><?= $data['title'] ?></p>
                     </td>
                     </td>
                     <td class="p-2 align-middle text-center bg-transparent border-b whitespace-nowrap shadow-transparent">
