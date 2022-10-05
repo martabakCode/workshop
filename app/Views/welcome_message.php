@@ -161,7 +161,7 @@
                 <div class="lgx-inner">
                     <div class="container">
                         <section class="card">
-                            <img src="/assets/img/poster1.png" alt="poster" loading=”lazy”>
+                            <img src="/assets/img/poster1.webp" alt="poster" loading=”lazy”>
                             <div class="col-sm-12">
                                 <div class="lgx-about-content-area">
                                     <div class="lgx-heading">
@@ -177,6 +177,8 @@
                                         Sedangkan GitHub adalah sebuah website yang digunakan untuk menyimpan dan mengelola kode suatu project. Yang mana anda dapat membuat atau mengupload kode anda ke server GitHub dan kemudian melakukan coding secara online.
                                         </p>
                                     </div>
+                                    <br>
+                                    <br>
                                     <div class="lgx-heading">
                                         <h2 class="heading ">HTML - Framework</h2>
                                         <!-- <h3 class="subheading">Do not miss the upcoming event, Who should attend?</h3> -->
@@ -209,25 +211,10 @@
             </div>
             <div class="flex flex-wrap">
                 <div class="w-1/2 lg:w-1/2">
-                    <div class="speaker1">
-                        <div class="lgx-single-speaker2 lgx-single-speaker3">
-                            <figure>
-                                <a class="profile-img"><img src="/assets/img/speakers/mas_ilham.png" alt="speaker" loading=”lazy”/></a>
-                                <figcaption>
-                                    <div class="speaker-info">
-                                        <h3 class="title">Ilham Nur Ramadhan</h3>
-                                        <h4 class="subtitle">Backend Developer </h4>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-1/2 lg:w-1/2">
                     <div class="speaker2">
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
-                                <a class="profile-img"><img src="/assets/img/speakers/mas_naufal.png" alt="speaker" loading=”lazy”/></a>
+                                <a class="profile-img"><img src="/assets/img/speakers/mas_naufal.webp" alt="speaker" loading=”lazy”/></a>
                                 <figcaption>
                                     <div class="speaker-info">
                                         <h3 class="title">Naufal Iksham</h3>
@@ -238,9 +225,21 @@
                         </div>
                     </div>
                 </div>
-           
-                
-                
+                <div class="w-1/2 lg:w-1/2">
+                    <div class="speaker1">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <a class="profile-img"><img src="/assets/img/speakers/mas_ilham.webp" alt="speaker" loading=”lazy”/></a>
+                                <figcaption>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Ilham Nur Ramadhan</h3>
+                                        <h4 class="subtitle">Backend Developer </h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -375,7 +374,7 @@
     <!--//.LGX SITE CONTAINER-->
     <!-- *** ADD YOUR SITE SCRIPT HERE *** -->
     <!-- JQUERY  -->
-    <script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/js/vendor/jquery-1.12.4.min.js" ></script>
 
     <!-- BOOTSTRAP JS  -->
     <script src="/assets/libs/bootstrap/js/bootstrap.min.js"></script>

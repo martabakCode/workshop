@@ -38,7 +38,7 @@ body:after{
   left:0;
   right:0;
   z-index:-1; /* needed to keep in the background */
-  background: url(../img/backgroundfix.png) no-repeat scroll;
+  background: url(../img/backgroundfix.webp) no-repeat scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7151,7 +7151,7 @@ button:hover:after {
   margin: 0 0 2.6rem;
   font-family: "Plavsky";
   text-shadow: 2px 2px 5px black;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 6rem;
   line-height: 7rem;
   font-weight: 700;
@@ -7161,7 +7161,7 @@ button:hover:after {
 .lgx-banner-info .date,
 .lgx-banner-info .location {
   font-family: 'Plavsky';
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   line-height: 3.9000000000000004rem;
   font-weight: 300;
   margin: 0 0 0.3rem;
@@ -8579,23 +8579,6 @@ button:hover:after {
   border-radius: 16px;
 }
 
-.lgx-about-img-sp:after {
-  position: absolute;
-  left: 53%;
-  bottom: -131%;
-  height: 150%;
-  width: 150%;
-  background: url(../img/dots2.png);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
-  transform: translateX(-98%) translateY(-25%) rotate(45deg);
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  z-index: 0;
-}
 
 .lgx-about-img-sp img {
   position: relative;
@@ -12457,7 +12440,6 @@ blockquote.lgx-testi-single:before {
 }
 
 .lgx-footer {
-  background: url(../img/footer-bg.jpg) bottom center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -12470,25 +12452,6 @@ blockquote.lgx-testi-single:before {
   background: #14378E;
 }
 
-.lgx-footer-music {
-  background: url(../img/footer-bgmusic.jpg) bottom center no-repeat;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-}
-
-.lgx-footer-black .lgx-inner-footer {
-  background: rgba(27, 39, 61, 0.95);
-}
-
-.lgx-footer-christmas {
-  background: url(../img/footer-christmas.jpg) bottom center no-repeat;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-}
 
 .lgx-footer-christmas .lgx-inner-footer {
   background: 0 0;

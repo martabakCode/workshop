@@ -40,9 +40,8 @@ $routes->get('/login', 'AuthController::index');
 $routes->get('/logout', 'AuthController::logout');
 $routes->post('/login', 'AuthController::login');
 $routes->post('/registration', 'AuthController::registration');
-$routes->post('/reminder', 'AuthController::reminder');
-$routes->get('/pay/(:num)', 'AuthController::pay/$1');
-$routes->get('/email', 'Home::email');
+$routes->post('/reminder', 'AuthController::reminder',['filter' => 'auth']);
+$routes->get('/pay/(:num)', 'AuthController::pay/$1',['filter' => 'auth']);
 //Admin
 $routes->get('/admin/dashboard', 'AdminController::index',['filter' => 'auth']);
 
